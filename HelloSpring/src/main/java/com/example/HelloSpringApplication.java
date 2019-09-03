@@ -1,0 +1,26 @@
+package com.example;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@SpringBootApplication
+public class HelloSpringApplication {
+
+	@RequestMapping("/")
+	String home1() {
+		return "Hello world";
+	}
+	
+	@RequestMapping("/demo")
+	String home() {
+		return "데모 페이지에 접속 하셨습니다.";
+	}
+	
+	public static void main(String[] args) {
+		SpringApplication.run(HelloSpringApplication.class, args);
+	}
+
+}
